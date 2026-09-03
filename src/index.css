@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors: Navy Blue, Red, White */
+  --color-navy-dark: #040d1c;
+  --color-navy: #07152b;
+  --color-navy-light: #0e2448;
+  --color-navy-card: #122b56;
+  --color-navy-border: rgba(30, 64, 120, 0.35);
+
+  --color-red: #d90429;
+  --color-red-dark: #b50220;
+  --color-red-light: #ef233c;
+  --color-red-glow: rgba(217, 4, 41, 0.4);
+
+  --color-white: #ffffff;
+  --color-offwhite: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-400: #94a3b8;
+
+  --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+/* Custom Scrollbar in Navy & Red Theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-navy-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a68;
+  border-radius: 5px;
+  border: 2px solid var(--color-navy-dark);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-red);
+}
+
+/* Typography Utility Classes */
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+/* Glassmorphism Header */
+.glass-nav {
+  background: rgba(7, 21, 43, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-nav-scrolled {
+  background: rgba(4, 13, 28, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(217, 4, 41, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Pulse Hover Animation for CTA Button */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(217, 4, 41, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 16px rgba(217, 4, 41, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(217, 4, 41, 0);
+  }
+}
+
+.pulse-on-hover:hover {
+  animation: pulse-ring 1.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Subtitle and heading character mask containers */
+.char-mask {
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Geometric scholastic grid lines overlay */
+.scholastic-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.scholastic-grid-light {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(7, 21, 43, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(7, 21, 43, 0.04) 1px, transparent 1px);
+}
+
+/* Card hover glow and reflections */
+.leadership-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.leadership-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(7, 21, 43, 0.18), 0 0 25px -5px rgba(217, 4, 41, 0.15);
+  border-color: rgba(217, 4, 41, 0.4);
+}
+
+/* Red line accent animation */
+.red-accent-line {
+  position: relative;
+}
+.red-accent-line::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--color-red);
+  border-radius: 2px;
+}
+
+/* Festive Celebrations Styling & Keyframes */
+@keyframes float-balloon-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(3deg);
+  }
+}
+
+@keyframes float-balloon-fast {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(-4deg);
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg) scale(1.1);
+    opacity: 0.2;
+  }
+}
+
+@keyframes celebration-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(239, 35, 60, 0.4);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.6);
+  }
+}
+
+@keyframes sparkle-twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.7) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
+  }
+}
+
+.animate-balloon-slow {
+  animation: float-balloon-slow 5s ease-in-out infinite;
+}
+
+.animate-balloon-fast {
+  animation: float-balloon-fast 3.8s ease-in-out infinite;
+}
+
+.animate-celebration-pulse {
+  animation: celebration-pulse 2.5s infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle-twinkle 2s infinite ease-in-out;
+}
+
+.confetti-piece {
+  position: absolute;
+  pointer-events: none;
+  animation: confetti-fall linear infinite;
+}
+

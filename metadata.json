@@ -1,0 +1,6 @@
+{
+  "name": "American Lycetuff Scholastic Campus",
+  "description": "Official award-winning single-page website for American Lycetuff, Scholastic Campus in Lahore, featuring GSAP animations and scholastic vision.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

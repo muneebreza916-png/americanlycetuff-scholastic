@@ -89,9 +89,18 @@ export const AdmissionsSection: React.FC<AdmissionsSectionProps> = ({ onOpenInqu
             <a
               href="tel:+923099419999"
               className="px-5 py-3 bg-black/30 hover:bg-black/40 border border-white/20 text-white font-medium text-sm rounded-xl transition-colors flex items-center"
+              title="Call Mobile & WhatsApp Helpline"
             >
-              <PhoneCall className="w-4 h-4 mr-2" />
-              Call Helpline (+92 309 9419999)
+              <PhoneCall className="w-4 h-4 mr-2 text-[#ef233c]" />
+              Call (+92 309 9419999)
+            </a>
+            <a
+              href="tel:+9242111257257"
+              className="px-5 py-3 bg-black/30 hover:bg-black/40 border border-white/20 text-white font-medium text-sm rounded-xl transition-colors flex items-center"
+              title="Call Official UAN Helpline"
+            >
+              <PhoneCall className="w-4 h-4 mr-2 text-[#ef233c]" />
+              UAN (042-111-257-257)
             </a>
           </div>
         </div>

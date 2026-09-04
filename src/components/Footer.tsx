@@ -162,13 +162,19 @@ export const Footer: React.FC<FooterProps> = ({
                 </div>
               </li>
 
-              <li className="flex items-center">
-                <Phone className="w-5 h-5 text-[#d90429] mr-3 shrink-0" />
-                <div>
-                  <a href="tel:+923099419999" className="text-white block font-medium hover:text-[#ef233c] transition-colors">
-                    +92 309 9419999
-                  </a>
-                  <span className="text-xs text-slate-400">Admissions Helpline & WhatsApp: +92 309 9419999</span>
+              <li className="flex items-start">
+                <Phone className="w-5 h-5 text-[#d90429] mr-3 shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <div className="flex flex-wrap items-center gap-x-3 text-white font-medium">
+                    <a href="tel:+923099419999" className="hover:text-[#ef233c] transition-colors" title="Admissions & WhatsApp Helpline">
+                      +92 309 9419999
+                    </a>
+                    <span className="text-slate-500">•</span>
+                    <a href="tel:+9242111257257" className="hover:text-[#ef233c] transition-colors" title="UAN Helpline">
+                      UAN: +92 42 111 257 257
+                    </a>
+                  </div>
+                  <span className="text-xs text-slate-400 block">Admissions Helpline & WhatsApp: +92 309 9419999</span>
                 </div>
               </li>
 

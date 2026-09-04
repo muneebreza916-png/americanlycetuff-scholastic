@@ -80,10 +80,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               <MapPin className="w-3.5 h-3.5 text-[#d90429] mr-1.5 inline group-hover:scale-110 transition-transform" />
               <span className="group-hover:underline underline-offset-2">31 MB, Millitary Accounts, Lahore</span>
             </a>
-            <span className="flex items-center text-slate-300">
-              <Phone className="w-3.5 h-3.5 text-[#d90429] mr-1.5 inline" />
-              <a href="tel:+923099419999" className="hover:text-white transition-colors">
+            <span className="flex items-center text-slate-300 space-x-2">
+              <Phone className="w-3.5 h-3.5 text-[#d90429] mr-0.5 inline" />
+              <a href="tel:+923099419999" className="hover:text-white transition-colors" title="Call Mobile / WhatsApp Helpline">
                 +92 309 9419999
+              </a>
+              <span className="text-white/30">•</span>
+              <a href="tel:+9242111257257" className="hover:text-white transition-colors" title="Call UAN Helpline">
+                UAN: +92 42 111 257 257
               </a>
             </span>
           </div>
@@ -317,6 +321,24 @@ export const Navbar: React.FC<NavbarProps> = ({
                     <span>Facebook: <strong className="text-white">American Lycetuff SC</strong></span>
                   </a>
                 </div>
+              </div>
+
+              {/* Mobile Phone & Helpline Numbers */}
+              <div className="px-1 pt-1 grid grid-cols-2 gap-2">
+                <a
+                  href="tel:+923099419999"
+                  className="flex items-center justify-center space-x-1.5 py-2 px-2 rounded-lg bg-[#0e2448] text-xs text-slate-200 hover:text-white border border-white/10 transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 text-[#ef233c] shrink-0" />
+                  <span className="truncate">+92 309 9419999</span>
+                </a>
+                <a
+                  href="tel:+9242111257257"
+                  className="flex items-center justify-center space-x-1.5 py-2 px-2 rounded-lg bg-[#0e2448] text-xs text-slate-200 hover:text-white border border-white/10 transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 text-[#ef233c] shrink-0" />
+                  <span className="truncate">UAN: 042-111-257</span>
+                </a>
               </div>
 
               {/* Mobile Address & Map Link */}
